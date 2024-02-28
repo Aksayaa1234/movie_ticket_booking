@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>seats</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .background{
+            position: absolute;
+            background-image: url("seatsb2.jpg");
+            background-size: 100%;
+            top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+            filter: blur(3px);
+            
+        }
+        .b-container{
+            position: relative;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+        }
+        .seats{
+               background-color: white;
+               height: 20px;
+               width: 20px;
+               margin: 7px;
+               border-radius: 5px 5px 0px 0px;
+               font-size: small;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               color: black;
+               font-weight: bold;
+        }
+        .seats.selected{
+            background-color: #6feaf6;
+        }
+        .seats.occupied{
+               background-color: #525261;
+        }
+        .row{
+            display: flex;
+        }
+        .seats:nth-of-type(4)
+        {
+            margin-left: 18px;
+        }
+        .seats:nth-last-of-type(4)
+        {
+            margin-right: 18px;
+        }
+        .seats:not(.occupied):hover{
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        .list .seats:hover{
+            cursor: default;
+            transform: scale(1);
+        }
+        .list li{
+            display: flex;
+            align-items: center;
+            
+        }
+        .list li large{
+            margin-left: 5px;
+        }
+        .screen{
+            background-color: rgba(203, 199, 199, 0.9);
+            height: 30px;
+            width: 100%;
+            margin: 15px 0px;
+            transform: rotateX(-45deg);
+            box-shadow: 0px 3px 10px rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            perspective: 1200px;
+            
+        }
+        h1{
+            color: white;
+           
+        }
+        .row p{
+           display: flex;
+           align-items: center;
+           margin-right: 10px;
+           margin: 0px;
+           margin-right: 12px;
+           margin-top: 3px;
+           padding: 0px;
+           color: rgb(185, 181, 181);
+        }
+        .row{
+            margin-right: 12px;
+        }
+        .list{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        /* .no{
+            margin-top: 5px;
+            width: 17px;
+        }
+        .no:nth-of-type(5)
+        {
+            margin-left: 8px;
+        }
+        .no:nth-last-of-type(4)
+        {
+            padding-left: 0px;
+            margin-right: 18px;
+        } */
+        .nu{
+               height: 14px;
+               width: 17px;
+               margin: 4.5px;
+               margin-top: 6px;
+               color: rgb(185, 181, 181);
+        }
+        .nu:nth-of-type(5)
+        {
+            margin-left: 20px;
+        }
+        .nu:nth-last-of-type(4)
+        {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="s-container">
+    <div class="background"></div>
+    <div class="b-container">
+        <h1>BOOK YOUR SEATS</h1>
+        <ul class="list">
+            <li>
+                <div class="seats"></div>
+                <large>N/A</large>
+            </li>
+            <li>
+                <div class="seats selected"></div>
+                <large>Selected</large>
+            </li>
+            <li>
+                <div class="seats occupied"></div>
+                <large>Occupied</large>
+            </li>
+        </ul>
+        <div class="container">
+        <div class="row">
+            <p>H</p>
+            <div class="seats">1</div>
+            <div class="seats">2</div>
+            <div class="seats">3</div>
+            <div class="seats">4</div>
+            <div class="seats">5</div>
+            <div class="seats">6</div>
+            <div class="seats">7</div>
+            <div class="seats">8</div>
+            <div class="seats">9</div>
+            <div class="seats">10</div>
+            <div class="seats">11</div>
+        </div>
+            <div class="row">
+                <p>G</p>
+                <div class="seats">1</div>
+                <div class="seats">2</div>
+                <div class="seats">3</div>
+                <div class="seats">4</div>
+                <div class="seats">5</div>
+                <div class="seats">6</div>
+                <div class="seats">7</div>
+                <div class="seats">8</div>
+                <div class="seats">9</div>
+                <div class="seats">10</div>
+                <div class="seats">11</div>
+            </div>
+            <div class="row">
+                <p>F</p>
+                <div class="seats">1</div>
+                <div class="seats">2</div>
+                <div class="seats">3</div>
+                <div class="seats">4</div>
+                <div class="seats">5</div>
+                <div class="seats">6</div>
+                <div class="seats">7</div>
+                <div class="seats">8</div>
+                <div class="seats">9</div>
+                <div class="seats">10</div>
+                <div class="seats">11</div>
+            </div>
+            <div class="row">
+                <p>E</p>
+                <div class="seats">1</div>
+                <div class="seats">2</div>
+                <div class="seats">3</div>
+                <div class="seats">4</div>
+                <div class="seats occupied">5</div>
+                <div class="seats occupied">6</div>
+                <div class="seats occupied">7</div>
+                <div class="seats">8</div>
+                <div class="seats">9</div>
+                <div class="seats">10</div>
+                <div class="seats">11</div>
+            </div>
+            <div class="row">
+                <p>D</p>
+                <div class="seats">1</div>
+                <div class="seats">2</div>
+                <div class="seats">3</div>
+                <div class="seats">4</div>
+                <div class="seats occupied">5</div>
+                <div class="seats">6</div>
+                <div class="seats">7</div>
+                <div class="seats occupied">8</div>
+                <div class="seats">9</div>
+                <div class="seats">10</div>
+                <div class="seats">11</div>
+            </div>
+            <div class="row">
+                <p>C</p>
+                <div class="seats occupied">1</div>
+                <div class="seats">2</div>
+                <div class="seats">3</div>
+                <div class="seats occupied">4</div>
+                <div class="seats">5</div>
+                <div class="seats">6</div>
+                <div class="seats occupied">7</div>
+                <div class="seats occupied">8</div>
+                <div class="seats occupied">9</div>
+                <div class="seats">10</div>
+                <div class="seats">11</div>
+            </div>
+            <div class="row">
+                <p>B</p>
+                <div class="seats">1</div>
+                <div class="seats">2</div>
+                <div class="seats">3</div>
+                <div class="seats">4</div>
+                <div class="seats occupied">5</div>
+                <div class="seats">6</div>
+                <div class="seats">7</div>
+                <div class="seats">8</div>
+                <div class="seats">9</div>
+                <div class="seats occupied">10</div>
+                <div class="seats occupied">11</div>
+            </div>
+            <div class="row">
+                <p>A</p>
+                <div class="seats">1</div>
+                <div class="seats occupied">2</div>
+                <div class="seats">3</div>
+                <div class="seats">4</div>
+                <div class="seats occupied">5</div>
+                <div class="seats occupied">6</div>
+                <div class="seats">7</div>
+                <div class="seats">8</div>
+                <div class="seats occupied">9</div>
+                <div class="seats">10</div>
+                <div class="seats">11</div>
+            </div>
+                <div class="screen"></div>
+            <!-- <div class="row">
+                <div class="nu"></div>
+                <div class="nu">1</div>
+                <div class="nu">2</div>
+                <div class="nu">3</div>
+                <div class="nu">4</div>
+                <div class="nu">5</div>
+                <div class="nu">6</div>
+                <div class="nu">7</div>
+                <div class="nu">8</div>
+                <div class="nu">9</div>
+                <div class="nu">10</div>
+                <div class="nu">11</div> -->
+                <!-- <p class="no"></p>
+                    <p class="no">1</p>
+                    <p class="no">2</p>
+                    <p class="no">3</p>
+                    <p class="no">4</p>
+                <p class="no">5</p>
+                <p class="no">6</p>
+                <p class="no">7</p>
+                <p class="no">8</p>
+                <p class="no">9</p>
+                <p class="no">10</p>
+                <p class="no">11</p> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    const container=document.querySelector(".container");
+    const seat=document.querySelectorAll(".row.seats:not(.occupied)");
+    const count=document.getElementById("count");
+    const total=document.getElementById("total");
+    const s = document.querySelectorAll(".row .seats");
+    function updateSelectedCount()
+    {
+        const selectedSeats = document.querySelectorAll('.row .seats.selected');
+        const seatsIndex = [...selectedSeats].map(function (seats)
+        {
+            return [...s].indexOf(seats);
+        });
+        console.log(seatsIndex);
+        const counts = selectedSeats.length; 
+      
+    }
+    container.addEventListener('click',(e) => {
+        if(e.target.classList.contains('seats') && !e.target.classList.contains('occupied') )
+        {
+        e.target.classList.toggle('selected');
+        }
+        updateSelectedCount();
+        
+    });
+</script>
+</body>
+</html>
